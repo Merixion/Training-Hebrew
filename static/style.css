@@ -1,0 +1,28 @@
+body{
+  display: flex;
+  background: linear-gradient(100deg, #36d9e2, #27e463, #35e425);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  position: fixed;
+  top: 5px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  color: #2769e4;
+}
+
+button{
+  height: 200px;
+  width: 400px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  color: #27e463;
+  background: #2769e4;
+}
+
+button:hover{
+  background: #0a42a9;
+}
