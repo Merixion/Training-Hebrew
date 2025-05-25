@@ -18,13 +18,18 @@ add.addEventListener('click', () => {
   document.body.appendChild(divBackground);
   const input = divBackground.querySelector('input');
   input.addEventListener('keydown', event =>{
+    if (words.length === 0) {
+      document.body.removeChild(divBackground);
+    }
     let h1 = divBackground.querySelector('h1');
     if (event.key === 'Enter' && input.value === words[randomIndex].he){
       divBackground.style.background = 'green';
       setTimeout(() => {
         divBackground.style.background = 'linear-gradient(100deg, #0287e7, #2759e4, #3225e4)';
+        words.splice(randomIndex, 1);
         randomIndex = Math.floor(Math.random() * words.length);
         h1.textContent = words[randomIndex].ru;
+        input.value = '';
       }, 1000);
     }else if (event.key === 'Enter' && input.value !== words[randomIndex].he) {
 			divBackground.style.background = 'red';

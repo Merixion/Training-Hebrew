@@ -40,7 +40,8 @@ h1{
 
 .div-background h1{
   color: black;
-  top: 300px
+  top: 300px;
+  left: 45vw;
 }
 
 .div-background input{
